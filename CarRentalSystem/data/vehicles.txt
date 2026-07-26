@@ -1,0 +1,7 @@
+V001||Perodua||Myvi||2023||WA1234||Auto||5||15000.0||Available||80.0||true||Economy
+V002||Proton||Saga||2022||WB5678||Manual||5||25000.0||Rented||70.0||true||Economy
+V003||Honda||City||2024||WC9012||Auto||5||5000.0||Available||120.0||true||Economy
+V004||Toyota||Fortuner||2023||WD3456||Auto||7||20000.0||Available||200.0||true||SUV
+V005||Proton||X70||2024||WE7890||Auto||5||8000.0||Available||180.0||false||SUV
+V006||Mercedes||E-Class||2024||WF1357||Auto||5||3000.0||Available||450.0||false||Luxury
+V007||BMW||7-Series||2023||WG2468||Auto||5||12000.0||Available||500.0||true||Luxury
