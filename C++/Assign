@@ -1,0 +1,640 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <cstdlib>
+#include <string>
+#include <cstring>
+#include <cctype>
+using namespace std;
+
+void Hello() {
+    cout << "\t\t\t\t" << " ———————————————————" << setw(2) << "            _______            " << setw(2) << " __________________" << endl;
+    cout << "\t\t\t\t " << "|                 |" << setw(2) << "           /       \\           " << setw(2) << " |                |" << endl;
+    cout << "\t\t\t\t " << "|                 |" << setw(2) << "          /         \\          " << setw(2) << " |     _______    |" << endl;
+    cout << "\t\t\t\t " << "———————      ——————" << setw(2) << "         /    /\\     \\         " << setw(2) << " |     |     |    |" << endl;
+    cout << "\t\t\t\t " << "       |    |      " << setw(2) << "        /    /  \\     \\        " << setw(2) << " |     |_____|    |" << endl;
+    cout << "\t\t\t\t " << "       |    |      " << setw(2) << "       /    /____\\     \\       " << setw(2) << " |   ___      ____|" << endl;
+    cout << "\t\t\t\t " << "       |    |      " << setw(2) << "      /   __________    \\      " << setw(2) << " |  |   \\     \\         " << endl;
+    cout << "\t\t\t\t " << "       |    |      " << setw(2) << "     /   /          \\    \\     " << setw(2) << " |  |    \\     \\       " << endl;
+    cout << "\t\t\t\t " << "       |    |      " << setw(2) << "    /   /            \\    \\    " << setw(2) << " |  |     \\     \\     " << endl;
+    cout << "\t\t\t\t " << "       |    |      " << setw(2) << "   /   /              \\    \\   " << setw(2) << " |  |      \\     \\   " << endl;
+    cout << "\t\t\t\t " << "       |____|      " << setw(2) << "  /___/                \\____\\  " << setw(2) << " |__|       \\_____\\ " << endl;
+}
+void FoodMenu() {
+
+    cout << "\t\t\t\t\t " << "___________________________________________" << endl;
+    cout << "\t\t\t\t\t|" << " TYPE     |" << "     1    |" << "    2    |" << "    3     |" << endl;
+    cout << "\t\t\t\t\t|" << "----------|" << "----------|" << "---------|" << "----------|" << endl;
+    cout << "\t\t\t\t\t|" << " Food     |" << " Chicken  |" << "  Fish   |" << "   Meat   |" << endl;
+    cout << "\t\t\t\t\t|" << "----------|" << "----------|" << "---------|" << "----------|" << endl;
+    cout << "\t\t\t\t\t|" << " Drink    |" << "   Coke   |" << "  XiTea  |" << " IceWater |" << endl;
+    cout << "\t\t\t\t\t|" << "----------|" << "----------|" << "---------|" << "----------|" << endl;
+    cout << "\t\t\t\t\t|" << " Dessert  |" << "  Cake(s) |" << " Cake(L) |" << "   Apple  |" << endl;
+    cout << "\t\t\t\t\t|" << "----------|" << "----------|" << "---------|" << "----------|" << endl;
+    cout << "\t\t\t\t\t|" << " SetMeal  |" << "  Set(s)  |" << "  Set(m) |" << "  Set(r)  |" << endl;
+    cout << "\t\t\t\t\t|" << "__________|" << "__________|" << "_________|" << "__________|" << endl;
+}
+
+void AddON() {
+
+    cout << "\t\t\t\t\t\t\t" << setw(10) << "  ADD ON\n";
+    cout << "\n" << "\t\t\t\t\t " << "___________________________________________" << endl;
+    cout << "\t\t\t\t\t|" << " TYPE     |" << "     1    |" << "    2    |" << "    3     |" << endl;
+    cout << "\t\t\t\t\t|" << "----------|" << "----------|" << "---------|" << "----------|" << endl;
+    cout << "\t\t\t\t\t|" << " Food     |" << "   Rice   |" << "   MEE   |" << "   Bun    |" << endl;
+    cout << "\t\t\t\t\t|" << "----------|" << "----------|" << "---------|" << "----------|" << endl;
+    cout << "\t\t\t\t\t|" << " Another  |" << "   EGG    |" << "    FF   |" << " IceCream |" << endl;
+    cout << "\t\t\t\t\t|" << "----------|" << "----------|" << "---------|" << "----------|" << endl;
+}
+
+int main() {
+
+    string R = " ";
+    int C = 0;
+    char again = ' ';
+    char again2 = ' ';
+
+
+    do {
+        Hello();
+        cout << "\n\t\t\t\t\t\t\t" << setw(10) << "WELCOME\n";
+        cout << "\t\t\t\t\t\t" << setw(25) << "TO TARUMT RESTAURANT\n";
+        cout << "\t\t\t\t\t--------------------------------------------\n";
+        cout << "\n";
+
+        cout << "1.Order Entry\n";
+        cout << "2.Menu list\n";
+        cout << "3.Exit\n";
+
+        cout << "\nEnter your choice: ";
+        cin >> C;
+        cin.ignore(100, '\n');
+
+        if (C == 1) {
+            char type[100] = " ";
+            char AT[100] = " ";
+
+            int FN = 0;
+            int FQ = 0;
+            int AN = 0;
+            int AQ = 0;
+            int i = 1;
+
+            char AO = ' ';
+            char again1 = ' ';
+            char pay = ' ';
+
+            double OF = 0.0;
+            double AD = 0.0;
+            double PP = 0.0;
+            double SF = 0.0;
+            double SF2 = 0.0;
+            double AB = 0.0;
+            double CD = 0.0;
+            double tax = 0.0;
+            double service = 0.0;
+
+            char choices[100];
+            int count = 0;
+
+            char choices2[100];
+            int count2 = 0;
+
+            char Type[100][20];
+            int t = 0;
+
+            char AddT[100][20];
+            int at = 0;
+
+            char Num[100];
+            int num1 = 0;
+
+            char Num1[100];
+            int num2 = 0;
+
+            do {
+                FoodMenu();
+
+                cout << "Customer " << i << endl;
+
+                do {
+                    cout << "Choose your Menu Type(Exp:Food): ";
+                    cin >> Type[t];
+
+                    if (strcmp(Type[t], "Food") != 0 && strcmp(Type[t], "Drink") != 0 && strcmp(Type[t], "Dessert") != 0
+                        && strcmp(Type[t], "SetMeal") != 0) {
+                        cout << "It's Invalid!!! Please try again...\n" << endl;
+                    }
+
+                    else {
+                        break;
+                    }
+
+                } while ((strcmp(Type[t], "Food") != 0 && strcmp(Type[t], "Drink") != 0 && strcmp(Type[t], "Dessert") != 0
+                    && strcmp(Type[t], "SetMeal") != 0));
+
+                t++;
+
+                do {
+                    cout << "Choose your Type Number: ";
+                    cin >> FN;
+
+                    if (FN > 3 || FN < 1) {
+                        cout << "Number Invalid!!! Please try again...\n" << endl;
+                    }
+
+                    else {
+                        break;
+                    }
+                } while (FN < 1 || FN > 3);
+
+                choices[count] = FN;
+                count++;
+
+                cin.ignore(100, '\n');
+                cout << "Enter your food quantity: ";
+                cin >> FQ;
+
+                Num[num1] = FQ;
+                num1++;
+
+                cin.ignore(100, '\n');
+                cout << "Do you want Add On?(Y/N): ";
+                cin >> AO;
+
+                if (AO == 'y' || AO == 'Y') {
+                    AddON();
+
+                    do {
+                        cout << "Enter your ADD ON Type(exp:Food): ";
+                        cin >> AddT[at];
+
+                        if (strcmp(AddT[at], "Food") != 0 && strcmp(AddT[at], "Another") != 0) {
+                            cout << "Type Invalid!!! Please Try again...\n" << endl;
+                        }
+
+                        else {
+                            break;
+                        }
+                    } while (strcmp(AddT[at], "Food") != 0 && strcmp(AddT[at], "Another") != 0);
+
+                    at++;
+
+                    do {
+                        cout << "Enter your ADD ON Number: ";
+                        cin >> AN;
+
+                        if (AN < 1 || AN > 3) {
+                            cout << "Number Invalid!!! Please try again...\n" << endl;
+                        }
+
+                        else {
+                            break;
+                        }
+                    } while (AN < 1 || AN > 3);
+
+                    choices2[count2] = AN;
+                    count2++;
+
+                    cout << "ADD ON Quantity: ";
+                    cin >> AQ;
+                    Num1[num2] = AQ;
+                    num2++;
+                }
+                cout << "Do you want order again??(Y/N) : ";
+                cin >> again;
+
+                i++;
+
+
+            } while (toupper(again) == 'Y');
+
+            for (int c = 0; c < t; c++) {
+                if (strcmp(Type[c], "Food") == 0) {
+                    switch (choices[c]) {
+                    case 1:
+                        OF = 15.80;
+                        break;
+
+                    case 2:
+                        OF = 10.80;
+                        break;
+
+                    default:
+                        OF = 12.50;
+                    }
+                }
+
+                else if (strcmp(Type[c], "Drink") == 0) {
+                    switch (choices[c]) {
+                    case 1:
+                        OF = 5.80;
+                        break;
+
+                    case 2:
+                        OF = 3.50;
+                        break;
+
+                    default:
+                        OF = 1.50;
+                    }
+                }
+
+                else if (strcmp(Type[c], "Dessert") == 0) {
+                    switch (choices[c]) {
+                    case 1:
+                        OF = 5.60;
+                        break;
+
+                    case 2:
+                        OF = 9.80;
+                        break;
+
+                    default:
+                        OF = 4.50;
+                    }
+                }
+
+                else if (strcmp(Type[c], "SetMeal") == 0) {
+                    switch (choices[c]) {
+                    case 1:
+                        OF = 18.90;
+                        break;
+
+                    case 2:
+                        OF = 22.90;
+                        break;
+
+                    default:
+                        OF = 25.90;
+                    }
+                }
+                AB += Num[c] * OF;
+            }
+            for (int d = 0; d < at; d++) {
+                if (strcmp(AddT[d], "Food") == 0) {
+                    switch (choices2[d]) {
+                    case 1:
+                        AD = 2.00;
+                        break;
+
+                    case 2:
+                        AD = 3.50;
+                        break;
+
+                    default:
+                        AD = 1.50;
+                    }
+                }
+
+                else if (strcmp(AddT[d], "Another") == 0) {
+                    switch (choices2[d]) {
+                    case 1:
+                        AD = 0.50;
+                        break;
+
+                    case 2:
+                        AD = 4.50;
+                        break;
+
+                    default:
+                        AD = 2.50;
+                    }
+                }
+                CD += Num1[d] * AD;
+            }
+
+            SF = AB + CD;
+            if (SF >= 75) {
+                tax = sqrt(SF) + 5;
+                service = SF * 0.08;
+            }
+
+            else {
+                tax = sqrt(SF);
+                service = SF * 0.05;
+            }
+
+            SF += tax + service;
+
+            cout << "\n\t\t\tInvoice: " << endl;
+            cout << "\t\t\t\t________________________________________" << endl;
+            cout << "\t\t\t\t|\t" << setw(21) << "TARUMT RESTAURANT" << setw(11) << "|" << endl;
+            cout << "\t\t\t\t|\t" << setw(17) << "03-1234-5678" << setw(15) << "|" << endl;
+            cout << "\t\t\t\t|           " << setw(28) << "|" << endl;
+
+            for (int a = 0; a < count; a++) {
+
+                int wc = Num[a];
+                if (strcmp(Type[a], "Food") == 0) {
+
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Chicken" << "*" << wc << setw(30) << "RM15.80|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|Fish" << "*" << wc << setw(33) << "RM10.80|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|Meat" << "*" << wc << setw(33) << "RM12.50|" << endl;
+                    }
+
+                }
+
+                else if (strcmp(Type[a], "Drink") == 0) {
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Coke" << "*" << wc << setw(33) << "RM5.80|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|XiTea" << "*" << wc << setw(32) << "RM3.50|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|IceWater" << "*" << wc << setw(29) << "RM1.50|" << endl;
+                    }
+                }
+
+                else if (strcmp(Type[a], "Dessert") == 0) {
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Cake(s)" << "*" << wc << setw(30) << "RM5.60|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|Cake(L)" << "*" << wc << setw(30) << "RM9.80|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|Apple" << "*" << wc << setw(32) << "RM4.50|" << endl;
+                    }
+                }
+
+                else if (strcmp(Type[a], "SetMeal") == 0) {
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Set(s)" << "*" << wc << setw(31) << "RM18.90|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|Set(m)" << "*" << wc << setw(31) << "RM22.90|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|Set(r)" << "*" << wc << setw(31) << "RM25.90|" << endl;
+                    }
+                }
+            }
+
+            for (int b = 0; b < count2; b++) {
+                int cw = Num1[b];
+                if (strcmp(AddT[b], "Food") == 0) {
+                    if (choices2[b] == 1) {
+                        cout << "\t\t\t\t|Rice" << "*" << cw << setw(33) << "RM2.00|" << endl;
+                    }
+
+                    else if (choices2[b] == 2) {
+                        cout << "\t\t\t\t|Mee" << "*" << cw << setw(34) << "RM3.50|" << endl;
+                    }
+
+                    else if (choices2[b] == 3) {
+                        cout << "\t\t\t\t|Bun" << "*" << cw << setw(34) << "RM1.50|" << endl;
+                    }
+                }
+
+                else if (strcmp(AddT[b], "Another") == 0) {
+                    if (choices2[b] == 1) {
+                        cout << "\t\t\t\t|EGG" << "*" << cw << setw(34) << "RM0.50|" << endl;
+                    }
+
+                    else if (choices2[b] == 2) {
+                        cout << "\t\t\t\t|FF" << "*" << cw << setw(35) << "RM4.50|" << endl;
+                    }
+
+                    else if (choices2[b] == 3) {
+                        cout << "\t\t\t\t|IceCream" << "*" << cw << setw(29) << "RM2.50|" << endl;
+                    }
+                }
+            }
+            cout << "\t\t\t\t|           " << setw(28) << "|" << endl;
+            cout << "\t\t\t\t|Tax" << setw(31) << fixed << setprecision(2) << "RM" << tax << "|" << endl;
+            cout << "\t\t\t\t|Service Tax" << setw(23) << "RM" << service << "|" << endl;
+
+            if (SF >= 100) {
+                cout << "\t\t\t\t|Total Price" << setw(21) << "RM" << SF << "|" << endl;
+            }
+            else if (SF < 10) {
+                cout << "\t\t\t\t|Total Price" << setw(23) << "RM" << SF << "|" << endl;
+            }
+
+            else {
+                cout << "\t\t\t\t|Total Price" << setw(22) << "RM" << SF << "|" << endl;
+            }
+
+            cout << "\t\t\t\t|______________________________________|" << endl;
+
+            cout << "\nTouch'n go(T)" << endl;
+            cout << "Bank Payment(B)" << endl;
+            cout << "Cash(C)" << endl;
+            cout << "Debit Card(D)" << endl;
+            cout << "Enter you Payment Way: ";
+            cin >> pay;
+
+            do {
+
+                cin.ignore(100, '\n');
+                cout << "Enter your Payment Price: ";
+                cin >> PP;
+
+                if (cin.fail()) {
+                    cout << "Please Enter Number...\n\n";
+                    cin.clear();
+                    
+                }
+                
+                else if(PP < SF){
+                    cout << "Insufficient Balance....\n\n";
+                }
+                
+                else {
+                    break;
+                }
+
+            } while (cin.fail() || PP < SF);
+
+            cout << "\n\t\t\tReceipt: " << endl;
+            cout << "\t\t\t\t________________________________________" << endl;
+            cout << "\t\t\t\t|\t" << setw(21) << "TARUMT RESTAURANT" << setw(11) << "|" << endl;
+            cout << "\t\t\t\t|\t" << setw(17) << "03-1234-5678" << setw(15) << "|" << endl;
+            cout << "\t\t\t\t|           " << setw(28) << "|" << endl;
+
+            for (int a = 0; a < count; a++) {
+                int cc = Num[a];
+                if (strcmp(Type[a], "Food") == 0) {
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Chicken" << "*" << cc << setw(30) << "RM15.80|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|Fish" << "*" << cc << setw(33) << "RM10.80|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|Meat" << "*" << cc << setw(31) << "RM12.50|" << endl;
+
+                    }
+
+                }
+
+                else if (strcmp(Type[a], "Drink") == 0) {
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Coke" << "*" << cc << setw(33) << "RM5.80|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|XiTea" << "*" << cc << setw(32) << "RM3.50|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|IceWater" << "*" << cc << setw(29) << "RM1.50|" << endl;
+                    }
+                }
+
+                else if (strcmp(Type[a], "Dessert") == 0) {
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Cake(s)" << "*" << cc << setw(30) << "RM5.60|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|Cake(L)" << "*" << cc << setw(30) << "RM9.80|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|Apple" << "*" << cc << setw(32) << "RM4.50|" << endl;
+                    }
+                }
+
+                else if (strcmp(Type[a], "SetMeal") == 0) {
+                    if (choices[a] == 1) {
+                        cout << "\t\t\t\t|Set(s)" << "*" << cc << setw(33) << "RM18.90|" << endl;
+                    }
+
+                    else if (choices[a] == 2) {
+                        cout << "\t\t\t\t|Set(m)" << "*" << cc << setw(33) << "RM22.90|" << endl;
+                    }
+
+                    else if (choices[a] == 3) {
+                        cout << "\t\t\t\t|Set(r)" << "*" << cc << setw(31) << "RM25.90|" << endl;
+                    }
+                }
+            }
+            for (int b = 0; b < count2; b++) {
+
+                int ww = Num1[b];
+                if (strcmp(AddT[b], "Food") == 0) {
+                    if (choices2[b] == 1) {
+                        cout << "\t\t\t\t|Rice" << "*" << ww << setw(33) << "RM2.00|" << endl;
+                    }
+
+                    else if (choices2[b] == 2) {
+                        cout << "\t\t\t\t|Mee" << "*" << ww << setw(34) << "RM3.50|" << endl;
+                    }
+
+                    else if (choices2[b] == 3) {
+                        cout << "\t\t\t\t|Bun" << "*" << ww << setw(34) << "RM1.50|" << endl;
+                    }
+                }
+
+                else if (strcmp(AddT[b], "Another") == 0) {
+                    if (choices2[b] == 1) {
+                        cout << "\t\t\t\t|EGG" << "*" << ww << setw(34) << "RM0.50|" << endl;
+                    }
+
+                    else if (choices2[b] == 2) {
+                        cout << "\t\t\t\t|FF" << "*" << ww << setw(35) << "RM4.50|" << endl;
+                    }
+
+                    else if (choices2[b] == 3) {
+                        cout << "\t\t\t\t|IceCream" << "*" << ww << setw(29) << "RM2.50|" << endl;
+                    }
+                }
+            }
+            cout << "\t\t\t\t|" << setw(39) << "|" << endl;
+            if (toupper(pay) == 'T') {
+                cout << "\t\t\t\t|Payment" << setw(32) << "Touch'n go|" << endl;
+            }
+
+            else if (toupper(pay) == 'B') {
+                cout << "\t\t\t\t|Payment" << setw(32) << "Bank|" << endl;
+            }
+
+            else if (toupper(pay) == 'C') {
+                cout << "\t\t\t\t|Payment" << setw(32) << "Cash|" << endl;
+            }
+
+            else if (toupper(pay) == 'D') {
+                cout << "\t\t\t\t|Payment" << setw(32) << "Debit Card|" << endl;
+            }
+
+            SF2 = PP - SF;
+
+            if (PP < 10) {
+                cout << "\t\t\t\t|Your Payment" << setw(22) << "RM" << PP << "|" << endl;
+            }
+
+            else if (PP < 100) {
+                cout << "\t\t\t\t|Your Payment" << setw(21) << "RM" << PP << "|" << endl;
+            }
+
+            else {
+                cout << "\t\t\t\t|Your Payment" << setw(20) << "RM" << PP << "|" << endl;
+            }
+
+            cout << "\t\t\t\t|           " << setw(28) << "|" << endl;
+            cout << "\t\t\t\t|Tax" << setw(31) << fixed << setprecision(2) << "RM" << tax << "|" << endl;
+            cout << "\t\t\t\t|Service Tax" << setw(23) << "RM" << service << "|" << endl;
+
+            if (SF < 10) {
+                cout << "\t\t\t\t|Total Price" << setw(23) << "RM" << SF << "|" << endl;
+            }
+
+            else {
+                cout << "\t\t\t\t|Total Price" << setw(22) << "RM" << SF << "|" << endl;
+            }
+
+            if (SF2 < 1000 && SF2 >= 100) {
+                cout << "\t\t\t\t|Return Money" << setw(20) << "RM" << SF2 << "|" << endl;
+            }
+
+            else if (SF2 < 100 && SF2 >= 10) {
+                cout << "\t\t\t\t|Return Money" << setw(21) << "RM" << SF2 << "|" << endl;
+            }
+
+            else if (SF2 < 10) {
+                cout << "\t\t\t\t|Return Money" << setw(22) << "RM" << SF2 << "|" << endl;
+            }
+
+            cout << "\t\t\t\t|______________________________________|" << endl;
+
+            cout << "Do you want order again??(Y/N) : ";
+            cin >> again;
+        }
+
+        else if (C == 2) {
+            FoodMenu();
+            cout << "\n";
+            AddON();
+
+            cout << "Do you want order again(Y/N): ";
+            cin >> again2;
+        }
+
+        else if (C == 3) {
+            cout << "\n\u2605 \u2605 \u2605 \u2605 \u2605 " << " Thanks For your choossing TARUMT RESTAURANT "
+                << "\u2665 \u2665 \u2665 \u2665 \u2665" << endl;
+            return 0;
+        }
+    } while (toupper(again) == 'Y' || toupper(again2) == 'Y');
+
+    cout << "\n\u2605 \u2605 \u2605 \u2605 \u2605 " << " Thanks For your choossing TARUMT RESTAURANT "
+        << "\u2665 \u2665 \u2665 \u2665 \u2665" << endl;
+}
